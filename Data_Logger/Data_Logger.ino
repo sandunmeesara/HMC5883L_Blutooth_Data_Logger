@@ -35,11 +35,11 @@ void loop() {
                          event.magnetic.z * event.magnetic.z);
 
   // Send data via Bluetooth
-  BTSerial.print("X: "); BTSerial.print(event.magnetic.x);BTSerial.print(",");
-  BTSerial.print(" Y: "); BTSerial.print(event.magnetic.y);BTSerial.print(",");
-  BTSerial.print(" Z: "); BTSerial.print(event.magnetic.z);BTSerial.print(",");
-  BTSerial.print(" Magnitude: "); BTSerial.print(magnitude);BTSerial.print(",");
-  BTSerial.print(" Heading: "); BTSerial.println(headingDegrees);
+  BTSerial.print(event.magnetic.x);BTSerial.print(",");
+  BTSerial.print(event.magnetic.y);BTSerial.print(",");
+  BTSerial.print(event.magnetic.z);BTSerial.print(",");
+  BTSerial.print(magnitude);BTSerial.print(",");
+  BTSerial.println(headingDegrees);
 
   delay(1000); // Delay to avoid spamming data
 }
