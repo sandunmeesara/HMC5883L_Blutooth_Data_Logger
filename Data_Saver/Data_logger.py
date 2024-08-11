@@ -17,7 +17,7 @@ with open('data.csv', 'w', newline='') as csvfile:
 
             # Try splitting the data and writing to CSV
             try:
-                x, y, z, magnitude, heading = map(float, data.split(','))
+                x, y, z, magnitude, heading = data.split(',')
                 timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")  # Current timestamp
                 csvwriter.writerow([timestamp, x, y, z, magnitude, heading])
                 csvfile.flush()  # Ensure data is written to the file immediately
